@@ -2,6 +2,8 @@ const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
 const mensagemEncontrada = document.querySelector(".titulo-menu-lateral");
 
+
+
 function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
     mensagem.value = textoEncriptado;
