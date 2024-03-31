@@ -2,15 +2,19 @@ const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
 const mensagemEncontrada = document.querySelector(".titulo-menu-lateral");
 
+
 function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
     mensagem.value = textoEncriptado;
-    mensagemEncontrada.textContent = "mensagem criptografada!"
+    mensagemEncontrada.textContent = "mensagem criptografada!";
+    document.querySelector(".btn-copiar").style.display = "inline";
+    mensagem.style.background = "none";
 }
 
 function encriptar(stringEncriptada){
     let matrizCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u", "ufat"]];
-    stringEncriptada = stringEncriptada.toLowerCase();
+    stringEncriptada = stringEncriptada.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    textArea.value = stringEncriptada;
 
     for(let i = 0; i < matrizCodigo.length; i++){
         if(stringEncriptada.includes(matrizCodigo[i][0])){
