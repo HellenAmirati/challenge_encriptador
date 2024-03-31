@@ -13,14 +13,14 @@ body{
 main {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 3%
 }
 
 .text-area{
     border: none;
     text-align: center;
     font-size: 32px;
-    border-radius: 20px;   
+    border-radius: 20px;  
 }
 
 .informacao{
@@ -56,9 +56,11 @@ main {
 
 
 .menu-lateral{
-    background: white;
     border-radius: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn-encriptar{
@@ -84,6 +86,8 @@ main {
 }
 
 .mensagem {
+    width: 449px;
+    height: 655px;
     border: none;
     background-image: url(/assets/boneco.svg);
     background-repeat: no-repeat;
@@ -105,7 +109,7 @@ main {
 
 .btn-copiar{
     visibility: visible;
-    margin: 20px;
+    margin: 10px;
     border-radius: 24px;
     width: 328px;
     height: 67px;
@@ -113,4 +117,46 @@ main {
     color: #0A3871;
     border: 1px solid #0A3871;
     font-size: 16px;
+}
+
+@media (max-width: 1300px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textarea-wrapper{
+        padding-left: 15%;
+    }
+
+    .menu-lateral{
+        padding-left: 15%;
+    }
+       
+}
+
+@media (max-width: 750px){
+
+    .text-area{
+        width: 350px;
+    }
+    
+    
+    .textarea-wrapper{
+        padding-left: 5%;
+    }
+
+    .menu-lateral{
+        padding-left: 20%;
+    }
+
+    .botoes{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mensagem {
+        width: 350px;
+    }
+       
 }
