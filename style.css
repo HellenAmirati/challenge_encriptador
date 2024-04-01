@@ -54,10 +54,8 @@ main {
 }
 
 
-
 .menu-lateral{
     border-radius: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,6 +84,7 @@ main {
 }
 
 .mensagem {
+    
     width: 449px;
     height: 655px;
     border: none;
@@ -95,16 +94,18 @@ main {
     border: none;
     text-align: center;
     font-size: 32px;
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 
 .titulo-menu-lateral {
     font-weight: bold;
     margin: 10px;
+    text-align: center;
 }
 
 .texto-menu-lateral{
     margin: 10px;
+    text-align: center;
 }
 
 .btn-copiar{
@@ -126,20 +127,34 @@ main {
         flex-direction: column;
     }
 
+    .text-area{
+        width: 95%;
+    }
+
     .textarea-wrapper{
-        padding-left: 15%;
+        padding-left: 5%;
+    }
+
+    .mensagem {
+        width: 100%;
     }
 
     .menu-lateral{
-        padding-left: 15%;
+        padding-left: 5%;
     }
+
+    .informacao{
+        margin-left: 6%;
+    }
+
+    
        
 }
 
 @media (max-width: 750px){
 
     .text-area{
-        width: 350px;
+        width: 90%;
     }
     
     
@@ -148,7 +163,7 @@ main {
     }
 
     .menu-lateral{
-        padding-left: 20%;
+        padding-left: 5%;
     }
 
     .botoes{
@@ -157,7 +172,11 @@ main {
     }
 
     .mensagem {
-        width: 350px;
+        width: 90%;
+    }
+
+    .informacao{
+        margin-left: 6%;
     }
        
 }
